@@ -85,6 +85,10 @@ Options:
   --help                          Show this message and exit.
 ```
 
+## Note on 2FA
+
+When the destination site uses two-factor authentication (2FA), the workflow remains the same. Ensure that you complete the 2FA process and obtain the cookies/auth tokens/session tokens after 2FA. These tokens will be used in the workflow.
+
 ## Demo
 
 [![Demo Video](https://img.youtube.com/vi/7OJ4w5BCpQ0/0.jpg)](https://www.youtube.com/watch?v=7OJ4w5BCpQ0)
