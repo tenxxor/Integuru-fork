@@ -98,3 +98,14 @@ Contributions to improve Integuru are welcome. Please feel free to submit issues
 Integuru is built by Integuru.ai. Besides our work on the agent, we take custom requests for new integrations or additional features for existing supported platforms. We also offer hosting and authentication services. If you have requests or want to work with us, reach out at richard@taiki.online.
 
 We open-source unofficial APIs that we've built already. You can find them [here](https://github.com/Integuru-AI/APIs-by-Integuru).
+
+## Privacy Policy
+
+### Data Storage
+Collected data is stored locally in the `network_requests.har` and `cookies.json` files.
+
+### LLM Usage
+The tool uses a cloud-based LLM (OpenAI's GPT-4o and o1-preview models).
+
+### LLM Training
+The LLM is not trained or improved by the usage of this tool.
