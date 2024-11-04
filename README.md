@@ -40,7 +40,7 @@ Let's assume we want to download utility bills:
 
 ## Setup
 
-1. Set up your OpenAI [API Keys](https://platform.openai.com/account/api-keys) and add the `OPENAI_API_KEY` environment variable. (We recommend your open ai account to have models that are at least as capable as OpenAI o1-mini. Models on par with OpenAI o1-preview are ideal.)
+1. Set up your OpenAI [API Keys](https://platform.openai.com/account/api-keys) and add the `OPENAI_API_KEY` environment variable. (We recommend using an account with access to models that are at least as capable as OpenAI o1-mini. Models on par with OpenAI o1-preview are ideal.)
 2. Install Python requirements via poetry:
    ```
    poetry install
