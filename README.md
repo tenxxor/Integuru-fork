@@ -95,7 +95,7 @@ When the destination site uses two-factor authentication (2FA), the workflow rem
 
 ## Demo
 
-[![Demo Video](https://img.youtube.com/vi/7OJ4w5BCpQ0/0.jpg)](https://www.youtube.com/watch?v=7OJ4w5BCpQ0)
+[![Demo Video](http://markdown-videos-api.jorgenkh.no/youtube/7OJ4w5BCpQ0)](https://www.youtube.com/watch?v=7OJ4w5BCpQ0)
 
 ## Contributing
 
