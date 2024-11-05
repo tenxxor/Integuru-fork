@@ -49,14 +49,18 @@ Let's assume we want to download utility bills:
    ```
    poetry shell
    ```
-4. Run the following command to spawn a browser:
+4. Register the Poetry virtual environment with Jupyter:
+   ```
+   poetry run ipython kernel install --user --name=integuru
+   ```
+5. Run the following command to spawn a browser:
    ```
    poetry run python create_har.py
    ```
    Log into your platform and perform the desired action (such as downloading a utility bill).
-5. Run Integuru:
+6. Run Integuru:
    ```
-   poetry run python -m integuru --prompt "download utility bills" --model gpt-4o
+   poetry run integuru --prompt "download utility bills" --model gpt-4o
    ```
    You can also run it via Jupyter Notebook `main.ipynb`
 
@@ -67,8 +71,8 @@ Let's assume we want to download utility bills:
 After setting up the project, you can use Integuru to analyze and reverse-engineer API requests for external platforms. Simply provide the appropriate .har file and a prompt describing the action that you want to trigger.
 
 ```
-poetry run python -m integuru --help
-Usage: python -m integuru [OPTIONS]
+poetry run integuru --help
+Usage: integuru [OPTIONS]
 
 Options:
   --model TEXT                    The LLM model to use (default is gpt-4o)
