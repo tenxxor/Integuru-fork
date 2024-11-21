@@ -89,9 +89,28 @@ Options:
   --help                          Show this message and exit.
 ```
 
+
+## Running Unit Tests
+
+To run unit tests using `pytest`, use the following command:
+
+```
+poetry run pytest
+```
+
+## Continuous Integration (CI) Workflow
+
+This repository includes a CI workflow using GitHub Actions. The workflow is defined in the `.github/workflows/ci.yml` file and is triggered on each push and pull request to the `main` branch. The workflow performs the following steps:
+
+1. Checks out the code.
+2. Sets up Python 3.12.
+3. Installs dependencies using `poetry`.
+4. Runs tests using `pytest`.
+
 ## Note on 2FA
 
 When the destination site uses two-factor authentication (2FA), the workflow remains the same. Ensure that you complete the 2FA process and obtain the cookies/auth tokens/session tokens after 2FA. These tokens will be used in the workflow.
+
 
 ## Demo
 
