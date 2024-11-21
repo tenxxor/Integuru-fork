@@ -40,7 +40,7 @@ Let's assume we want to download utility bills:
 
 ## Setup
 
-1. Set up your OpenAI [API Keys](https://platform.openai.com/account/api-keys) and add the `OPENAI_API_KEY` environment variable. (We recommend your open ai account to have models that are at least as capable as OpenAI o1-mini. Models on par with OpenAI o1-preview are ideal.)
+1. Set up your OpenAI [API Keys](https://platform.openai.com/account/api-keys) and add the `OPENAI_API_KEY` environment variable. (We recommend using an account with access to models that are at least as capable as OpenAI o1-mini. Models on par with OpenAI o1-preview are ideal.)
 2. Install Python requirements via poetry:
    ```
    poetry install
@@ -49,14 +49,18 @@ Let's assume we want to download utility bills:
    ```
    poetry shell
    ```
-4. Run the following command to spawn a browser:
+4. Register the Poetry virtual environment with Jupyter:
+   ```
+   poetry run ipython kernel install --user --name=integuru
+   ```
+5. Run the following command to spawn a browser:
    ```
    poetry run python create_har.py
    ```
    Log into your platform and perform the desired action (such as downloading a utility bill).
-5. Run Integuru:
+6. Run Integuru:
    ```
-   poetry run python -m integuru --prompt "download utility bills" --model gpt-4o
+   poetry run integuru --prompt "download utility bills" --model gpt-4o
    ```
    You can also run it via Jupyter Notebook `main.ipynb`
 
@@ -67,8 +71,8 @@ Let's assume we want to download utility bills:
 After setting up the project, you can use Integuru to analyze and reverse-engineer API requests for external platforms. Simply provide the appropriate .har file and a prompt describing the action that you want to trigger.
 
 ```
-poetry run python -m integuru --help
-Usage: python -m integuru [OPTIONS]
+poetry run integuru --help
+Usage: integuru [OPTIONS]
 
 Options:
   --model TEXT                    The LLM model to use (default is gpt-4o)
@@ -84,6 +88,7 @@ Options:
                                   code
   --help                          Show this message and exit.
 ```
+
 
 ## Running Unit Tests
 
@@ -102,9 +107,14 @@ This repository includes a CI workflow using GitHub Actions. The workflow is def
 3. Installs dependencies using `poetry`.
 4. Runs tests using `pytest`.
 
+## Note on 2FA
+
+When the destination site uses two-factor authentication (2FA), the workflow remains the same. Ensure that you complete the 2FA process and obtain the cookies/auth tokens/session tokens after 2FA. These tokens will be used in the workflow.
+
+
 ## Demo
 
-[![Demo Video](https://img.youtube.com/vi/7OJ4w5BCpQ0/0.jpg)](https://www.youtube.com/watch?v=7OJ4w5BCpQ0)
+[![Demo Video](http://markdown-videos-api.jorgenkh.no/youtube/7OJ4w5BCpQ0)](https://www.youtube.com/watch?v=7OJ4w5BCpQ0)
 
 ## Contributing
 
@@ -115,3 +125,14 @@ Contributions to improve Integuru are welcome. Please feel free to submit issues
 Integuru is built by Integuru.ai. Besides our work on the agent, we take custom requests for new integrations or additional features for existing supported platforms. We also offer hosting and authentication services. If you have requests or want to work with us, reach out at richard@taiki.online.
 
 We open-source unofficial APIs that we've built already. You can find them [here](https://github.com/Integuru-AI/APIs-by-Integuru).
+
+## Privacy Policy
+
+### Data Storage
+Collected data is stored locally in the `network_requests.har` and `cookies.json` files.
+
+### LLM Usage
+The tool uses a cloud-based LLM (OpenAI's GPT-4o and o1-preview models).
+
+### LLM Training
+The LLM is not trained or improved by the usage of this tool.
