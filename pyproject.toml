@@ -17,6 +17,8 @@ playwright = "^1.47.0"
 networkx = "^3.3"
 matplotlib = "^3.9.2"
 ipykernel = "^6.29.5"
+aiohttp = "^3.11.11"
+browserbase = "^1.0.5"
 
 [tool.poetry.scripts]
 integuru = "integuru.__main__:cli"
