@@ -127,7 +127,7 @@ async def open_browser_and_capture_har():
         print("Created a new page in the context.")
     
         # # 7) Optionally, perform an initial navigation to ensure network activity
-        # await page.goto("https://www.google.com")
+        await page.goto("https://www.google.com")
         # print("Navigated to https://www.example.com to generate network activity.")
     
         # # 8) Inform the user and wait for manual navigation
@@ -136,7 +136,7 @@ async def open_browser_and_capture_har():
         #     "All network activity will be captured.\n"
         #     "Once you're done, return to this terminal and press Enter to save the HAR file and close the session."
         # )
-        await async_input("Press Enter to continue and close the browser...")
+        # await async_input("Press Enter to continue and close the browser...")
     
         # 9) Initiate closure
         is_closing = True
