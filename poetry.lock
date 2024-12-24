@@ -551,6 +551,25 @@ docs = ["ipython", "matplotlib", "numpydoc", "sphinx"]
 tests = ["pytest", "pytest-cov", "pytest-xdist"]
 
 [[package]]
+name = "dataclasses-json"
+version = "0.5.9"
+description = "Easily serialize dataclasses to and from JSON"
+optional = false
+python-versions = ">=3.6"
+files = [
+    {file = "dataclasses-json-0.5.9.tar.gz", hash = "sha256:e9ac87b73edc0141aafbce02b44e93553c3123ad574958f0fe52a534b6707e8e"},
+    {file = "dataclasses_json-0.5.9-py3-none-any.whl", hash = "sha256:1280542631df1c375b7bc92e5b86d39e06c44760d7e3571a537b3b8acabf2f0c"},
+]
+
+[package.dependencies]
+marshmallow = ">=3.3.0,<4.0.0"
+marshmallow-enum = ">=1.5.1,<2.0.0"
+typing-inspect = ">=0.4.0"
+
+[package.extras]
+dev = ["flake8", "hypothesis", "ipython", "mypy (>=0.710)", "portray", "pytest (>=7.2.0)", "setuptools", "simplejson", "twine", "types-dataclasses", "wheel"]
+
+[[package]]
 name = "debugpy"
 version = "1.8.6"
 description = "An implementation of the Debug Adapter Protocol for Python"
@@ -1378,6 +1397,39 @@ pydantic = [
 requests = ">=2,<3"
 
 [[package]]
+name = "marshmallow"
+version = "3.23.2"
+description = "A lightweight library for converting complex datatypes to and from native Python datatypes."
+optional = false
+python-versions = ">=3.9"
+files = [
+    {file = "marshmallow-3.23.2-py3-none-any.whl", hash = "sha256:bcaf2d6fd74fb1459f8450e85d994997ad3e70036452cbfa4ab685acb19479b3"},
+    {file = "marshmallow-3.23.2.tar.gz", hash = "sha256:c448ac6455ca4d794773f00bae22c2f351d62d739929f761dce5eacb5c468d7f"},
+]
+
+[package.dependencies]
+packaging = ">=17.0"
+
+[package.extras]
+dev = ["marshmallow[tests]", "pre-commit (>=3.5,<5.0)", "tox"]
+docs = ["alabaster (==1.0.0)", "autodocsumm (==0.2.14)", "sphinx (==8.1.3)", "sphinx-issues (==5.0.0)", "sphinx-version-warning (==1.1.2)"]
+tests = ["pytest", "simplejson"]
+
+[[package]]
+name = "marshmallow-enum"
+version = "1.5.1"
+description = "Enum field for Marshmallow"
+optional = false
+python-versions = "*"
+files = [
+    {file = "marshmallow-enum-1.5.1.tar.gz", hash = "sha256:38e697e11f45a8e64b4a1e664000897c659b60aa57bfa18d44e226a9920b6e58"},
+    {file = "marshmallow_enum-1.5.1-py2.py3-none-any.whl", hash = "sha256:57161ab3dbfde4f57adeb12090f39592e992b9c86d206d02f6bd03ebec60f072"},
+]
+
+[package.dependencies]
+marshmallow = ">=2.0.0"
+
+[[package]]
 name = "matplotlib"
 version = "3.9.2"
 description = "Python plotting package"
@@ -1626,6 +1678,17 @@ files = [
     {file = "multidict-6.1.0-cp39-cp39-win_amd64.whl", hash = "sha256:aa466da5b15ccea564bdab9c89175c762bc12825f4659c11227f515cee76fa4a"},
     {file = "multidict-6.1.0-py3-none-any.whl", hash = "sha256:48e171e52d1c4d33888e529b999e5900356b9ae588c2f09a52dcefb158b27506"},
     {file = "multidict-6.1.0.tar.gz", hash = "sha256:22ae2ebf9b0c69d206c003e2f6a914ea33f0a932d4aa16f236afc049d9958f4a"},
+]
+
+[[package]]
+name = "mypy-extensions"
+version = "1.0.0"
+description = "Type system extensions for programs checked with the mypy type checker."
+optional = false
+python-versions = ">=3.5"
+files = [
+    {file = "mypy_extensions-1.0.0-py3-none-any.whl", hash = "sha256:4392f6c0eb8a5668a69e23d168ffa70f0be9ccfd32b5cc2d26a34ae5b844552d"},
+    {file = "mypy_extensions-1.0.0.tar.gz", hash = "sha256:75dbf8955dc00442a438fc4d0666508a9a97b6bd41aa2f0ffe9d2f2725af0782"},
 ]
 
 [[package]]
@@ -1981,6 +2044,21 @@ files = [
 [package.dependencies]
 greenlet = "3.1.1"
 pyee = "12.0.0"
+
+[[package]]
+name = "playwright-har-tracer"
+version = "0.3.2"
+description = "A Python implementation version of Playwright's HAR tracer"
+optional = false
+python-versions = ">=3.8,<4.0"
+files = [
+    {file = "playwright-har-tracer-0.3.2.tar.gz", hash = "sha256:0cf133ae1716e0d2e927623e31bf7883f9de944c7ffbd7ac149825e3f6e825c4"},
+    {file = "playwright_har_tracer-0.3.2-py3-none-any.whl", hash = "sha256:c1f826261ee72910a835eb7274edbb75526b83128ab4a565d08a36603c22400d"},
+]
+
+[package.dependencies]
+dataclasses-json = ">=0.5.6,<0.6.0"
+python-dateutil = ">=2.8.2,<3.0.0"
 
 [[package]]
 name = "prompt-toolkit"
@@ -2854,6 +2932,21 @@ files = [
 ]
 
 [[package]]
+name = "typing-inspect"
+version = "0.9.0"
+description = "Runtime inspection utilities for typing module."
+optional = false
+python-versions = "*"
+files = [
+    {file = "typing_inspect-0.9.0-py3-none-any.whl", hash = "sha256:9ee6fc59062311ef8547596ab6b955e1b8aa46242d854bfc78f4f6b0eff35f9f"},
+    {file = "typing_inspect-0.9.0.tar.gz", hash = "sha256:b23fc42ff6f6ef6954e4852c1fb512cdd18dbea03134f91f856a95ccc9461f78"},
+]
+
+[package.dependencies]
+mypy-extensions = ">=0.3.0"
+typing-extensions = ">=3.7.4"
+
+[[package]]
 name = "urllib3"
 version = "2.2.3"
 description = "HTTP library with thread-safe connection pooling, file post, and more."
@@ -2980,4 +3073,4 @@ propcache = ">=0.2.0"
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.12"
-content-hash = "1b7a85754e0ae68a7f1b6e8a94090c698495031f081e283c8ff1e3e884f5b118"
+content-hash = "a798bbbf4b2b25634ad239bed1fe93a4d057f88552c97f14241978d3fa98eb73"

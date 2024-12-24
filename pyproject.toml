@@ -19,6 +19,7 @@ matplotlib = "^3.9.2"
 ipykernel = "^6.29.5"
 aiohttp = "^3.11.11"
 browserbase = "^1.0.5"
+playwright-har-tracer = "^0.3.2"
 
 [tool.poetry.scripts]
 integuru = "integuru.__main__:cli"
